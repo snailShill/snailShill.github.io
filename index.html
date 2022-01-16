@@ -11,9 +11,21 @@
 <body>
 	
 	<br><br>
-	<h1>Am I doing it right?</h1>
+	<h1 id="haitch">Am I doing it right?</h1>
 	<br>
 	<p>no</p>
 
 </body>
+<script>
+	function sleep(ms) {
+		return new Promise(resolve => setTimeout(resolve, ms));
+	};
+	i = 0;
+	while (i<10) {
+		sleep(800)
+		messoj = "Am I doing it right? ";
+		messoj += "huh?".repeat(i);
+		document.getElementById("haitch").innerHTML = messoj;
+		i ++;
+	};
 </html>
